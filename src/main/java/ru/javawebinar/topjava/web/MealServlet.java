@@ -12,7 +12,6 @@ import java.io.IOException;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -40,7 +39,6 @@ public class MealServlet extends HttpServlet {
         request.setAttribute("userMealWithExcess", mealsTo);
 
         request.getRequestDispatcher("/meals.jsp").forward(request, response);
-//        при redirrect параметры теряются
-//        response.sendRedirect("meals.jsp");
     }
+
 }
