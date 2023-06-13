@@ -1,14 +1,11 @@
 package ru.javawebinar.topjava.web.user;
 
+import org.springframework.stereotype.Controller;
 import ru.javawebinar.topjava.model.User;
 
 import static ru.javawebinar.topjava.web.SecurityUtil.authUserId;
 
-/** Контроллер, где залогиненный пользователь будет работать со своими данными
- * Пользователь может посмотреть и модифицировать свои данные
- * может модифицировать только себя
- * по этому нельзя передавать параметры пользователя как параметры HTTP запроса
- */
+@Controller
 public class ProfileRestController extends AbstractUserController {
 
     public User get() {
