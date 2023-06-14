@@ -50,7 +50,7 @@ public class InMemoryUserRepository implements UserRepository {
         return repository
                 .values()
                 .stream()
-                .sorted(Comparator.comparing(User::getName))
+                .sorted(Comparator.comparing(User::getName).thenComparing(User::getEmail))
                 .toList();
     }
 
